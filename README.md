@@ -22,13 +22,13 @@ How to configure and install Grafana, Loki, and Promtail on a Raspberry Pi K3s C
 - from the `home-rpi-monitoring` directory, run `helm template loki-stack charts/monitoring -f kustomize/monitoring/values.yaml --include-crds --debug > kustomize/monitoring/release.yaml`
 
 ## Step 3.) - Deploy monitoring stack
-- Depoly with `kubectl apply -k kustomize/.`
+- Deploy with `kubectl apply -k kustomize/.`
 - Wait for all pods to spin up
 - Get Grafana password `kubectl get secret --namespace monitoring loki-stack-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`
 - Port forward the grafana svc to 3000
 - Go to `localhost:3000` and login with user=`admin` and the password from above
 
-## Step 4.) - Configure ingress
+## Step .4) - OPTIONAL - Configure ingress
 - If you have pihole running, you can configure a custom Local DNS name for the Grafana UI
 - To install pihole, follow the instructions [here](https://github.com/philgladman/home-rpi-pihole.git).
 - Login to pihole ui.
