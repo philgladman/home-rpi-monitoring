@@ -28,7 +28,7 @@ How to configure and install Grafana, Loki, and Promtail on a Raspberry Pi K3s C
 - Port forward the grafana svc to 3000
 - Go to `localhost:3000` and login with user=`admin` and the password from above
 
-## Step .4) - OPTIONAL - Configure ingress
+## Step 4.) - OPTIONAL - Configure ingress
 - If you have pihole running, you can configure a custom Local DNS name for the Grafana UI
 - To install pihole, follow the instructions [here](https://github.com/philgladman/home-rpi-pihole.git).
 - Login to pihole ui.
