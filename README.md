@@ -12,10 +12,9 @@ How to configure and install Grafana, Loki, and Promtail on a Raspberry Pi K3s C
 - If you already have a Raspberry pi configured with K3s, MetalLb, and Nginx ingress, please move on to [Step 1.)](README.md#step-1---configure-monitoring-stack)
 
 ## Step 1.) - Configure monitoring stack
-- Make applicable changes to the `kustomize/monitoring/values.yaml` file.
 - The current configuration has Grafana, Loki, and Promtail enabled.
 - This also has Loki configured as a Data Source in Grafana
-- To enable or disable any services, simply set `enabled: ` to `true` or `false` in the values.yaml file.
+- To enable or disable any services, simply set `enabled: ` to `true` or `false` in the `kustomize/monitoring/values.yaml` file.
 
 ## Step 2.) - Create Deployment with Helm Templating
 - Install Helm `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`
